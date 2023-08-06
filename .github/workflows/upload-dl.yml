@@ -12,6 +12,8 @@ jobs:
       run: |
         git clone https://github.com/openwrt/openwrt
         git clone https://github.com/MATRIX06060/dl-download
+        sudo apt update
+        sudo apt upgrade
         sudo apt install -y binutils bzip2 diff find flex gawk gcc-6+ getopt grep install libc-dev libz-dev make4.1+ perl python3.7+ rsync subversion unzip which
 
     - name: Config Move
