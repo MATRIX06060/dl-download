@@ -8,10 +8,10 @@ jobs:
     name: Upload dl Files
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-      with:
-        ref: master
+    - name: Clone Repo
+      run: |
+        git clone https://github.com/MATRIX06060/dl-download
+        cd dl-download
         
     - name: Download DL
       run: make download -j8
