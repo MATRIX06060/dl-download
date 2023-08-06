@@ -11,10 +11,11 @@ jobs:
     - name: Clone Repo
       run: |
         git clone https://github.com/openwrt/openwrt
+        git clone https://github.com/MATRIX06060/dl-download
 
     - name: Config Move
       run: |
-        mv .config openwrt/.config
+        mv dl-download/.config openwrt/.config
         cd openwrt
 
     - name: Get File
