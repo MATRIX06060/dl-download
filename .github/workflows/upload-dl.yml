@@ -1,0 +1,20 @@
+name: Upload Tools DL
+on:
+  workflow_dispatch:
+
+jobs:
+  makedlupload:
+    name: Upload dl Files
+    runs-on: ubuntu-latest
+    - name: Checkout master
+      uses: actions/checkout@v2
+      with:
+        ref: master
+    - name: Download DL
+      run: make download -j8
+
+    - name: Upload Files
+      uses: actions/upload-artifact@v2
+      with:
+        name: DLFILE
+        path: dl/
