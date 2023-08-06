@@ -17,7 +17,7 @@ jobs:
 
     - uses: actions/checkout@v2
     - name: Setup Debug Session
-       uses: csexton/debugger-action@master
+      uses: csexton/debugger-action@master
 
     - name: Upload Files
       uses: actions/upload-artifact@v2
