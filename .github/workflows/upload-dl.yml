@@ -1,4 +1,5 @@
 name: Upload Tools DL
+
 on:
   workflow_dispatch:
 
@@ -6,10 +7,12 @@ jobs:
   makedlupload:
     name: Upload dl Files
     runs-on: ubuntu-latest
-    - name: Checkout master
+    steps:
+    - name: Checkout
       uses: actions/checkout@v2
       with:
         ref: master
+        
     - name: Download DL
       run: make download -j8
 
