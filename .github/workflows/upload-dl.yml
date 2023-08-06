@@ -10,11 +10,9 @@ jobs:
     steps:
     - name: Clone Repo
       run: |
-        sudo git clone https://github.com/MATRIX06060/dl-download
-        sudo cd dl-download
-        ls
-
-
+        git clone https://github.com/MATRIX06060/dl-download
+        cd dl-download
+        
     - uses: actions/checkout@v2
     - name: Setup Debug Session
       uses: csexton/debugger-action@master
