@@ -20,8 +20,6 @@ jobs:
 
     - name: Get File
       run: |
-        ./scripts/feeds update -a
-        ./scripts/feeds install -a
         make download -j8
 
     - name: Upload Files
